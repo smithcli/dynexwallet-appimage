@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Dynex Wallet
+Comment=Create wallets, send and receive DNX and manage transactions and recipients.
+Exec=dynexwallet
+Icon=org.dynexcoin.dynex-wallet-app
+Categories=Finance;
+MimeType=application;
+Keywords=dynex;wallet;

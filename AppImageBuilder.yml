@@ -1,7 +1,7 @@
 # appimage-builder recipe see https://appimage-builder.readthedocs.io for details
 version: 1
 AppDir:
-  path: /var/home/makuasom/Projects/appimage/dynexwallet/AppDir
+  path: ./AppDir
   app_info:
     id: org.dynexcoin.dynex-wallet-app
     name: dynexwallet
@@ -26,7 +26,6 @@ AppDir:
     - sourceline: deb http://security.ubuntu.com/ubuntu/ jammy-security universe
     - sourceline: deb http://security.ubuntu.com/ubuntu/ jammy-security multiverse
     include:
-    - libc6:amd64
     - libboost-all-dev:amd64
     - libcurl4-openssl-dev:amd64
   files:
@@ -56,3 +55,4 @@ AppDir:
 AppImage:
   arch: x86_64
   update-information: guess
+
