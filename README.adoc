@@ -1,0 +1,47 @@
+= Unofficial AppImage of Dynex Wallet
+
+This is an unofficial 
+https://appimage.org/[AppImage]
+distribution of the 
+https://github.com/dynexcoin/Dynex-Wallet-App/tree/main[Dynex Wallet App].
+
+== To use app
+
+Download release, make executable and run.
+
+[source, bash]
+----
+chmod u+x dynexwallet-2.2.2-x86_64.AppImage
+./dynexwallet-2.2.2-x86_64.AppImage
+----
+
+== To build
+
+Build from source.
+Dependinces to build include:
+`git make wget curl podman`
+
+[source, bash]
+----
+git clone https://github.com/smithcli/dynexwallet-appimage.git
+make download
+make
+----
+
+== To clean up
+
+Removes all but source files, downloads directory and AppImage.
+
+[source, bash]
+----
+make clean
+----
+
+== To Uninstall
+
+Delete the AppImage.
+
+[source, bash]
+----
+rm dynexwallet-2.2.2-x86_64.AppImage
+----

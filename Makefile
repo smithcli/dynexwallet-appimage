@@ -5,9 +5,10 @@ appimage_builder_release := curl -s https://api.github.com/repos/AppImageCrafter
 appimage_builder = $(shell $(appimage_builder_release) | cut -d/ -f9)
 
 build:
+	# AppImage requires fuse & SYS_ADMIN to mount
 	@podman run --rm\
-		--volume ./:/root \
-		--workdir /root \
+		--volume ./:/opt \
+		--workdir /opt \
 		--cap-add SYS_ADMIN \
 		--device /dev/fuse \
 		docker.io/library/ubuntu:22.04 /bin/bash -c '\
